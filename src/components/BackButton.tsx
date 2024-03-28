@@ -7,7 +7,7 @@ interface BackButtonProps {
   type?: "button" | "submit" | "reset";
 }
 
-const BackButton: React.FC<BackButtonProps> = ({ label, type = "button" }: BackButtonProps) => { // Set a default value for type
+const BackButton: React.FC<BackButtonProps> = ({ label, type = "button" }: BackButtonProps) => {
   const navigate = useNavigate();
 
   const handleBack = () => {

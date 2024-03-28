@@ -7,8 +7,9 @@ export interface Account {
   }
 
 interface AccountTableProps {
-  accounts: Account[]; // Assume Account has the properties name, number, and value
+  accounts: Account[];
 }
+
 
 const AccountTable: React.FC<AccountTableProps> = ({ accounts }) => {
   return (

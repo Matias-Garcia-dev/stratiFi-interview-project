@@ -33,7 +33,6 @@ function ClientsPage(): JSX.Element {
     navigate(`/client-view/profile/${encodeURIComponent(client.name)}`);
   };
 
-  // add /${encodeURIComponent(client.name)}
 
   if (!userId) {
     return <div>Loading...</div>;

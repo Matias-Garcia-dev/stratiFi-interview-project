@@ -10,13 +10,13 @@ interface User {
 interface UserState {
   user: User | null;
   accessToken: string | null;
-  clientName: string | null; // Add clientName to the state
+  clientName: string | null; 
 }
 
 const initialState: UserState = {
   user: null,
   accessToken: null,
-  clientName: null, // Initialize clientName to null
+  clientName: null,
 };
 
 const userSlice = createSlice({
