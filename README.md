@@ -3,7 +3,7 @@
 # StratiFi Interview Project
 
 ## Description
-The StratiFi Interview Project is a web application developed as part of the interview process for StratiFi. It showcases skills in React, Redux, TypeScript, and integrating with RESTful APIs.
+The StratiFi Interview Project is a web application developed as part of the interview process for StratiFi. It showcases skills in React, Redux, and TypeScript, and integrates with RESTful APIs.
 
 ## Installation
 1. Make sure you have `npm` installed globally: `npm install -g json-server`
@@ -14,7 +14,7 @@ The StratiFi Interview Project is a web application developed as part of the int
 
 ## Usage
 Access the website locally at `http://localhost:5173`. Follow these steps:
-1. Log in with the following credentials:
+1. Login with the following credentials:
    - Email: admin@admin.com
    - Password: admin123
 2. Once logged in, you'll be directed to the Clients View page.
