@@ -7,6 +7,14 @@ export interface User {
   acesstoken: string;
 }
 
+export interface Client {
+  id: number;
+  userId: number;
+  name: string;
+  company: string;
+  accounts: { id: number; name: string; balance: number }[];
+}
+
 export const fetchUserData = async (email: string, password: string): Promise<User> => {
   try {
     const response = await axios.get<User[]>('http://localhost:5000/users');
@@ -26,5 +34,20 @@ export const fetchUserData = async (email: string, password: string): Promise<Us
     } else {
       throw new Error('An unknown error occurred while fetching user data');
     }
+  }
+};
+
+
+export const fetchUserClientsById = async (userId: number): Promise<Client[]> => {
+  try {
+    const response = await axios.get<Client[]>('http://localhost:5000/clients');
+    const clients = response.data;
+    console.log(clients,"test client")
+    const userClients = clients.filter((client) => client.userId === userId);
+
+    return userClients;
+  } catch (error) {
+    console.error('Error fetching user clients:', error);
+    throw new Error('Failed to fetch user clients');
   }
 };

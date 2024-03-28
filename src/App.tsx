@@ -1,8 +1,8 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/LoginPage'
 import ClientViewPage from './pages/ClientsPage';
 import PrivateRoute from './utils/PrivateRoute';
+import ClientProfilePage from './pages/ClientProfilePage';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/client-view" element={
         <PrivateRoute>
           <ClientViewPage/>
+          <Route path="profile" element={<ClientProfilePage />} />
         </PrivateRoute>} />
       </Routes>
     </Router>

@@ -23,12 +23,16 @@ const userSlice = createSlice({
     loginUser(state, action: PayloadAction<{ user: User; accessToken: string }>) {
       state.user = action.payload.user;
       state.accessToken = action.payload.accessToken;
-      localStorage.setItem('accessToken', state.accessToken)
+      const userAuthData = {
+        accessToken: state.accessToken,
+        userId: state.user.id
+      };
+      localStorage.setItem('userData', JSON.stringify(userAuthData));
     },
     logoutUser(state) {
       state.user = null;
       state.accessToken = null;
-      localStorage.removeItem('accessToken');
+      localStorage.removeItem('userData');
 
     },
   },

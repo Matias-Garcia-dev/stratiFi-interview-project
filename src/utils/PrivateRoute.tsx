@@ -6,9 +6,10 @@ interface ProtectedRouteProps {
 }
 
 const PrivateRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const  isAuthenticated = localStorage.getItem('accessToken');
-
-  console.log(isAuthenticated,"auth")
+  const  userDataJson = (localStorage.getItem('userData') || '{}');
+  const authentication = JSON.parse(userDataJson)
+  const isAuthenticated = authentication.accessToken
+  
   return (isAuthenticated && isAuthenticated != null) ? <>{children}</> : <Navigate to="/login" replace />;
 };
 
