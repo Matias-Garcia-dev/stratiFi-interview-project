@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+Here's the README based on your provided information:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# StratiFi Interview Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+The StratiFi Interview Project is a web application developed as part of the interview process for StratiFi. It showcases skills in React, Redux, TypeScript, and integrating with RESTful APIs.
 
-## Expanding the ESLint configuration
+## Installation
+1. Make sure you have `npm` installed globally: `npm install -g json-server`
+2. Clone the repository: `git clone https://github.com/your-username/stratifi-interview-project.git`
+3. Navigate to the project directory: `cd stratifi-interview-project`
+4. Install dependencies: `npm install`
+5. Start the JSON server: `json-server --watch db.json --port 5000`
+6. Start the development server: `npm start`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Usage
+Access the website locally at `http://localhost:5173`. Follow these steps:
+1. Log in with the following credentials:
+   - Email: admin@admin.com
+   - Password: admin123
+2. Once logged in, you'll be directed to the Clients View page.
+3. Select a client to view their profile.
+4. Navigate back to the main view.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
+- User login with email and password
+- Account management
+- Client profile viewing
+- Navigation between views
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Acknowledgments
+- StratiFi team for the interview opportunity
+- React and Redux for frontend architecture
+- React Router for routing
+- Axios for HTTP requests
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Contact
+For any questions or feedback, feel free to reach out at matiasenriquegarciadev@gmail.com or [LinkedIn](https://www.linkedin.com/in/matias-garcia-1a661153/).
+
+---
+
+Feel free to customize the content further to better fit your project's requirements!
