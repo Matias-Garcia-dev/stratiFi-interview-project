@@ -37,12 +37,10 @@ const userSlice = createSlice({
       state.accessToken = null;
       localStorage.removeItem('userData');
     },
-    updateClientName(state, action: PayloadAction<string>) {
-      state.clientName = action.payload;
-    },
+
   },
 });
 
-export const { loginUser, logoutUser, updateClientName } = userSlice.actions;
+export const { loginUser, logoutUser } = userSlice.actions;
 
 export default userSlice.reducer;

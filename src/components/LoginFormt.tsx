@@ -6,6 +6,7 @@ import Button from './ui/Button';
 import Input from './ui/Input';
 import Text from './ui/Text';
 import { fetchUserData } from '../services/api';
+import { generateAccessToken } from '../services/auth';
 
 function LoginForm(): JSX.Element {
     const [email, setEmail] = useState<string>('');
@@ -38,7 +39,7 @@ function LoginForm(): JSX.Element {
 
         try {
             const user = await fetchUserData(email, password);
-            const accessToken = "Token";
+            const accessToken = generateAccessToken();
             dispatch(loginUser({ user, accessToken }));
             navigate('/client-view');
         } catch (error) {
