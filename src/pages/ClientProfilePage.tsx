@@ -2,7 +2,7 @@
  
  const ClientProfilePage = () => {
    return (
-     <div>ClientProfilePage</div>
+     <div>ClientProfilePageas</div>
    )
  }
  

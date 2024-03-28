@@ -27,6 +27,7 @@ const userSlice = createSlice({
         accessToken: state.accessToken,
         userId: state.user.id
       };
+      console.log(userAuthData)
       localStorage.setItem('userData', JSON.stringify(userAuthData));
     },
     logoutUser(state) {

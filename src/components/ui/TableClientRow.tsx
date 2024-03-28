@@ -3,7 +3,7 @@ import React from 'react';
 interface Client {
   id: number;
   name: string;
-  company: string;
+  email: string;
 }
 
 interface TableClientRowProps {
@@ -15,7 +15,7 @@ const TableClientRow: React.FC<TableClientRowProps> = ({ client, onClick }) => {
   return (
     <tr onClick={onClick}>
       <td>{client.name}</td>
-      <td>{client.company}</td>
+      <td>{client.email}</td>
     </tr>
   );
 };

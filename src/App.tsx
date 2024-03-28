@@ -13,8 +13,10 @@ function App() {
         <Route path="/client-view" element={
         <PrivateRoute>
           <ClientViewPage/>
-          <Route path="profile" element={<ClientProfilePage />} />
-        </PrivateRoute>} />
+        </PrivateRoute>} > 
+        <Route path="" element={<ClientViewPage/>} /> 
+        <Route path="profile" element={<ClientProfilePage/>}/>
+        </Route>
       </Routes>
     </Router>
   );

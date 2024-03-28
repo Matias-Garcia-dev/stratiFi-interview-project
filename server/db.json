@@ -1,41 +1,71 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": 130,
       "email": "admin@admin.com",
-      "password": "admin123"
+      "password": "admin123",
+      "clients": [
+        {
+          "id": 1,
+          "name": "John Doe",
+          "email": "john@mailEx.com",
+          "phoneNumber": "1234567890",
+          "address": "123 Main St"
+        },
+        {
+          "id": 2,
+          "name": "Jane Smith",
+          "email": "jane@mailEx.com",
+          "phoneNumber": "9876543210",
+          "address": "456 Elm St"
+        },
+        {
+          "id": 3,
+          "name": "Alice Johnson",
+          "email": "alice@mailEx.com",
+          "phoneNumber": "5678901234",
+          "address": "789 Oak St"
+        }
+      ]
     }
   ],
   "clients": [
     {
       "id": 1,
-      "userId": 1,
       "name": "John Doe",
-      "company": "ACME Inc.",
+      "email": "john@mailEx.com",
+      "phoneNumber": "1234567890",
+      "address": "123 Main St",
+      "userId": "130",
       "accounts": [
-        { "id": 1, "name": "Savings", "balance": 1000 },
-        { "id": 2, "name": "Checking", "balance": 500 },
-        { "id": 3, "name": "Investment", "balance": 5000 }
+        { "name": "Savings", "number": "123456", "value": 1000 },
+        { "name": "Checking", "number": "654321", "value": 500 },
+        { "name": "Investment", "number": "987654", "value": 5000 }
       ]
     },
     {
       "id": 2,
-      "userId": 1,
       "name": "Jane Smith",
-      "company": "XYZ Corp.",
+      "email": "jane@mailEx.com",
+      "phoneNumber": "9876543210",
+      "address": "456 Elm St",
+      "userId": "130",
       "accounts": [
-        { "id": 4, "name": "Savings", "balance": 2000 },
-        { "id": 5, "name": "Checking", "balance": 1000 }
+        { "name": "Savings", "number": "987654", "value": 2000 },
+        { "name": "Checking", "number": "123789", "value": 1000 }
       ]
     },
     {
       "id": 3,
-      "userId": 1,
       "name": "Alice Johnson",
-      "company": "ABC Ltd.",
+      "email": "alice@mailEx.com",
+      "phoneNumber": "5678901234",
+      "address": "789 Oak St",
+      "userId": "130",
       "accounts": [
-        { "id": 6, "name": "Savings", "balance": 3000 }
+        { "name": "Savings", "number": "456789", "value": 3000 }
       ]
     }
   ]
+
 }

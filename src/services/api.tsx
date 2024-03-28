@@ -4,7 +4,17 @@ export interface User {
   id: number;
   email: string;
   password: string;
-  acesstoken: string;
+  accessToken: string;
+  clients?: UserClient[];
+}
+
+interface UserClient {
+  id: number;
+  userId: number;
+  name: string;
+  email: string;
+  phoneNumber: string;
+  address: string;
 }
 
 export interface Client {
@@ -12,7 +22,10 @@ export interface Client {
   userId: number;
   name: string;
   company: string;
-  accounts: { id: number; name: string; balance: number }[];
+  email: string;
+  phoneNumber: string;
+  address: string;
+  accounts: { name: string; number: string; value: number }[];
 }
 
 export const fetchUserData = async (email: string, password: string): Promise<User> => {
@@ -42,7 +55,9 @@ export const fetchUserClientsById = async (userId: number): Promise<Client[]> =>
   try {
     const response = await axios.get<Client[]>('http://localhost:5000/clients');
     const clients = response.data;
-    console.log(clients,"test client")
+
+    console.log(clients, "fetchclient")
+  
     const userClients = clients.filter((client) => client.userId === userId);
 
     return userClients;

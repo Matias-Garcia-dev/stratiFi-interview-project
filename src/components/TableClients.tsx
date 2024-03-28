@@ -1,11 +1,8 @@
 import React from 'react';
 import TableClientRow from './ui/TableClientRow';
+import { Client } from '../services/api';
 
-interface Client {
-  id: number;
-  name: string;
-  company: string;
-}
+
 
 interface ClientsTableProps {
   clients: Client[];
@@ -18,7 +15,7 @@ const TableClients: React.FC<ClientsTableProps> = ({ clients, onRowClick }) => {
       <thead>
         <tr>
           <th>Name</th>
-          <th>Company</th>
+          <th>Email</th>
         </tr>
       </thead>
       <tbody>
