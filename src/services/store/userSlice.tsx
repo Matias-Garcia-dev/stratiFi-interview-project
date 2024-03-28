@@ -1,3 +1,4 @@
+// In your store file (userSlice.ts)
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface User {
@@ -9,11 +10,13 @@ interface User {
 interface UserState {
   user: User | null;
   accessToken: string | null;
+  clientName: string | null; // Add clientName to the state
 }
 
 const initialState: UserState = {
   user: null,
   accessToken: null,
+  clientName: null, // Initialize clientName to null
 };
 
 const userSlice = createSlice({
@@ -27,18 +30,19 @@ const userSlice = createSlice({
         accessToken: state.accessToken,
         userId: state.user.id
       };
-      console.log(userAuthData)
       localStorage.setItem('userData', JSON.stringify(userAuthData));
     },
     logoutUser(state) {
       state.user = null;
       state.accessToken = null;
       localStorage.removeItem('userData');
-
+    },
+    updateClientName(state, action: PayloadAction<string>) {
+      state.clientName = action.payload;
     },
   },
 });
 
-export const { loginUser, logoutUser } = userSlice.actions;
+export const { loginUser, logoutUser, updateClientName } = userSlice.actions;
 
 export default userSlice.reducer;

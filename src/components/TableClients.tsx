@@ -20,7 +20,7 @@ const TableClients: React.FC<ClientsTableProps> = ({ clients, onRowClick }) => {
       </thead>
       <tbody>
         {clients.map((client) => (
-          <TableClientRow key={client.id} client={client} onClick={() => onRowClick(client)} />
+          <TableClientRow key={client.phoneNumber} client={client} onClick={() => onRowClick(client)} />
         ))}
       </tbody>
     </table>

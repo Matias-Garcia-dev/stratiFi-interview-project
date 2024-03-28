@@ -5,12 +5,13 @@ import TableClients from '../components/TableClients';
 import Text from '../components/ui/Text'
 import { useNavigate } from 'react-router-dom';
 
+
 function ClientsPage(): JSX.Element {
   const [clients, setClients] = useState<Client[]>([]);
-  const navigate = useNavigate()
-  const userDataJson = (localStorage.getItem('userData') || '{}')
-  const user = JSON.parse(userDataJson)
-  const userId = user.userId
+  const navigate = useNavigate();
+  const userDataJson = (localStorage.getItem('userData') || '{}');
+  const user = JSON.parse(userDataJson);
+  const userId = user.userId;
   
 
   useEffect(() => {
@@ -18,7 +19,7 @@ function ClientsPage(): JSX.Element {
       if (userId) {
         try {
           const fetchedClients = await fetchUserClientsById(userId);
-          console.log(fetchedClients)
+          
           setClients(fetchedClients);
         } catch (error) {
           console.error('Error fetching clients:', error);
@@ -29,10 +30,10 @@ function ClientsPage(): JSX.Element {
     fetchClients();
   }, [userId]);
   const handleProfileClick = (client: Client) => {
-    console.log("profile",client)
-    navigate(`/client-view/profile`);
+    navigate(`/client-view/profile/${encodeURIComponent(client.name)}`);
   };
 
+  // add /${encodeURIComponent(client.name)}
 
   if (!userId) {
     return <div>Loading...</div>;

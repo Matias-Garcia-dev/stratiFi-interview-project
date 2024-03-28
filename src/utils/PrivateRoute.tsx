@@ -11,10 +11,12 @@ const PrivateRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const userDataJson = localStorage.getItem('userData') || '{}';
   const authentication = JSON.parse(userDataJson);
   const isAuthenticated = authentication.accessToken;
-  const isProfilePage = location.pathname === '/client-view/profile';
+  const isProfilePage = location.pathname.startsWith('/client-view/profile');
+  
 
   if (isAuthenticated && isAuthenticated !== null && isProfilePage) {
-    return <ClientProfilePage />;
+    const clientName = location.pathname.split('/').pop(); 
+    return <ClientProfilePage clientName={clientName} />;
   }
 
   return isAuthenticated && isAuthenticated !== null ? <>{children}</> : <Navigate to="/login" replace />;

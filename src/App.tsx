@@ -15,7 +15,7 @@ function App() {
           <ClientViewPage/>
         </PrivateRoute>} > 
         <Route path="" element={<ClientViewPage/>} /> 
-        <Route path="profile" element={<ClientProfilePage/>}/>
+        <Route path="profile/:clientName" element={<ClientProfilePage/>}/>
         </Route>
       </Routes>
     </Router>
