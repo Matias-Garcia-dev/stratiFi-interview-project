@@ -46,11 +46,7 @@ function ClientProfilePage({ clientName }: ClientProfilePageProps): JSX.Element 
     return <div>Loading...</div>;
   }
 
-  console.log(client)
-
   
-  
-
   return (
     <div>
       <Text element="h1">Client Profile</Text>
