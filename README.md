@@ -1,6 +1,4 @@
-Here's the README based on your provided information:
 
----
 
 # StratiFi Interview Project
 
@@ -9,7 +7,7 @@ The StratiFi Interview Project is a web application developed as part of the int
 
 ## Installation
 1. Make sure you have `npm` installed globally: `npm install -g json-server`
-2. Clone the repository: `git clone https://github.com/your-username/stratifi-interview-project.git`
+2. Clone the repository: `git clone https://github.com/Matias-Garcia-dev/stratiFi-interview-project.git`
 3. Navigate to the project directory: `cd stratifi-interview-project`
 4. Install dependencies: `npm install`
 5. Start the JSON server: `json-server --watch db.json --port 5000`
@@ -38,7 +36,3 @@ Access the website locally at `http://localhost:5173`. Follow these steps:
 
 ## Contact
 For any questions or feedback, feel free to reach out at matiasenriquegarciadev@gmail.com or [LinkedIn](https://www.linkedin.com/in/matias-garcia-1a661153/).
-
----
-
-Feel free to customize the content further to better fit your project's requirements!
