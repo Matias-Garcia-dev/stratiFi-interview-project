@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@admin.com",
+      "password": "admin123"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "John Doe",
+      "company": "ACME Inc.",
+      "accounts": [
+        { "id": 1, "name": "Savings", "balance": 1000 },
+        { "id": 2, "name": "Checking", "balance": 500 },
+        { "id": 3, "name": "Investment", "balance": 5000 }
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Jane Smith",
+      "company": "XYZ Corp.",
+      "accounts": [
+        { "id": 4, "name": "Savings", "balance": 2000 },
+        { "id": 5, "name": "Checking", "balance": 1000 }
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "name": "Alice Johnson",
+      "company": "ABC Ltd.",
+      "accounts": [
+        { "id": 6, "name": "Savings", "balance": 3000 }
+      ]
+    }
+  ]
+}
