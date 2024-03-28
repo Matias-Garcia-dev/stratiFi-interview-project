@@ -1,6 +1,6 @@
 import React from 'react';
 
-type HeadingLevel = 'h1' | 'h2' | 'p' | 'span';
+type HeadingLevel = 'h1' | 'h2' | 'p' | 'span' | 'th';
 
 interface TextProps {
   children: React.ReactNode;

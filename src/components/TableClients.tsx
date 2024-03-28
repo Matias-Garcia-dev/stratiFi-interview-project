@@ -1,6 +1,7 @@
 import React from 'react';
-import TableClientRow from './ui/TableClientRow';
+import TableClientRow from './TableClientRow';
 import { Client } from '../services/api';
+import Text from './ui/Text';
 
 
 
@@ -9,13 +10,17 @@ interface ClientsTableProps {
   onRowClick: (client: Client) => void;
 }
 
+const headers = ['ID', 'Name', 'Email', 'Phone Number', 'Address'];
+
 const TableClients: React.FC<ClientsTableProps> = ({ clients, onRowClick }) => {
+  
   return (
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Email</th>
+        {headers.map((header, index) => (
+        <Text key={index} element='th'>{header}</Text>
+      ))}
         </tr>
       </thead>
       <tbody>

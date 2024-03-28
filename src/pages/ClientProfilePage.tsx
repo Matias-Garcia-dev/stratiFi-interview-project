@@ -1,9 +1,25 @@
 import { useEffect, useState } from 'react';
 import { fetchClientByNameandId } from '../services/api';
 import { Client } from '../services/api';
+import Text from '../components/ui/Text';
+import TableAccount from '../components/TableAccount';
+import BackButton from '../components/BackButton';
+
+
 interface ClientProfilePageProps {
   clientName?: string; 
 }
+
+interface ClientDetail {
+  label: string;
+  property: keyof Client;
+}
+
+const clientDetails: ClientDetail[] = [
+  { label: 'Email', property: 'email' },
+  { label: 'Phone Number', property: 'phoneNumber' },
+  { label: 'Address', property: 'address' },
+];
 
 function ClientProfilePage({ clientName }: ClientProfilePageProps): JSX.Element {
 
@@ -17,7 +33,6 @@ function ClientProfilePage({ clientName }: ClientProfilePageProps): JSX.Element 
     const fetchClient = async () => {
       try {
         const fetchedClient = await fetchClientByNameandId(decodedClientName , userId);
-        console.log(fetchedClient)
         setClient(fetchedClient!);
       } catch (error) {
         console.error('Error fetching client:', error);
@@ -31,12 +46,24 @@ function ClientProfilePage({ clientName }: ClientProfilePageProps): JSX.Element 
     return <div>Loading...</div>;
   }
 
+  console.log(client)
+
+  
+  
+
   return (
     <div>
-      <h1>Client Profile</h1>
-      <p>Name: {client.name}</p>
-      <p>Company: {client.company}</p>
-      {/* Add other profile information here */}
+      <Text element="h1">Client Profile</Text>
+      <Text element='h2'>Name: {client.name}</Text>
+      {clientDetails.map(({ label, property }) => (
+        <Text key={label} element='p'>
+          {label}: {(client[property] as string | number)}
+        </Text>
+        
+      ))}
+      <Text element="h2">Accounts:</Text>
+      <TableAccount accounts={client.accounts} />
+      <BackButton label="Back to Client View" />
     </div>
   );
 }

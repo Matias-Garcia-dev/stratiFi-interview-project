@@ -8,7 +8,7 @@ export interface User {
   clients?: UserClient[];
 }
 
-interface UserClient {
+export interface UserClient {
   id: number;
   userId: number;
   name: string;
