@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './input.module.css'
 
 interface InputFieldProps {
   label: string;
@@ -13,7 +14,7 @@ function Input (props: InputFieldProps): JSX.Element {
 
   return (
     <div>
-      <label>
+      <label className={style.lableInput}>
         {label}:
         <input
           type={type}

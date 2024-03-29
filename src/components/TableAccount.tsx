@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './TableAccount.module.css'
 
 export interface Account {
     name: string;
@@ -13,7 +14,7 @@ interface AccountTableProps {
 
 const AccountTable: React.FC<AccountTableProps> = ({ accounts }) => {
   return (
-    <table>
+    <table className={styles.table}>
       <thead>
         <tr>
           <th>Name</th>

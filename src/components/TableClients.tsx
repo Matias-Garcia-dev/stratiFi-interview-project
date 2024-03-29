@@ -2,7 +2,7 @@ import React from 'react';
 import TableClientRow from './TableClientRow';
 import { Client } from '../services/api';
 import Text from './ui/Text';
-
+import styles from './TableClients.module.css';
 
 
 interface ClientsTableProps {
@@ -15,7 +15,8 @@ const headers = ['ID', 'Name', 'Email', 'Phone Number', 'Address'];
 const TableClients: React.FC<ClientsTableProps> = ({ clients, onRowClick }) => {
   
   return (
-    <table>
+    <div className={styles.tableWrapper}>
+      <table className={styles.table}>
       <thead>
         <tr>
         {headers.map((header, index) => (
@@ -29,6 +30,7 @@ const TableClients: React.FC<ClientsTableProps> = ({ clients, onRowClick }) => {
         ))}
       </tbody>
     </table>
+    </div>
   );
 };
 
