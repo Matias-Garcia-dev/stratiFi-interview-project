@@ -10,7 +10,7 @@ The StratiFi Interview Project is a web application developed as part of the int
 2. Clone the repository: `git clone https://github.com/Matias-Garcia-dev/stratiFi-interview-project.git`
 3. Navigate to the project directory: `cd stratifi-interview-project`
 4. Install dependencies: `npm install`
-5. Start the development server: `npm start` for the json server and the app.
+5. Start the development server: `npm run start` for the json server and the app.
 
 ## Usage
 Access the website locally at `http://localhost:5173`. Follow these steps:
