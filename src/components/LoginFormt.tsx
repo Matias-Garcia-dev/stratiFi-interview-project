@@ -7,6 +7,7 @@ import Input from './ui/Input';
 import Text from './ui/Text';
 import { fetchUserData } from '../services/api';
 import { generateAccessToken } from '../services/auth';
+import style from './LoginForm.module.css'
 
 function LoginForm(): JSX.Element {
     const [email, setEmail] = useState<string>('');
@@ -59,7 +60,8 @@ function LoginForm(): JSX.Element {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={style.mainForm}>
+            <div>
             <Input
                 label="Email"
                 type="email"
@@ -67,7 +69,6 @@ function LoginForm(): JSX.Element {
                 onChange={handleEmailChange}
                 required
             />
-            {emailError && <Text>{emailError}</Text>}
             <Input
                 label="Password"
                 type="password"
@@ -75,10 +76,12 @@ function LoginForm(): JSX.Element {
                 onChange={handlePasswordChange}
                 required
             />
-            {passwordError && <Text>{passwordError}</Text>}
             <Button type="submit">
                 <Text>Login</Text>
             </Button>
+            </div>
+            {emailError && <Text>{emailError}</Text>}
+            {passwordError && <Text>{passwordError}</Text>}
         </form>
     );
 }

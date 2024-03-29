@@ -1,0 +1,7 @@
+.lableInput {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 15px;
+    max-width: 255px;
+}
