@@ -16,7 +16,7 @@ const TableClients: React.FC<ClientsTableProps> = ({ clients, onRowClick }) => {
   
   return (
     <div className={styles.tableWrapper}>
-      <table>
+      <table className={styles.table}>
       <thead>
         <tr>
         {headers.map((header, index) => (
