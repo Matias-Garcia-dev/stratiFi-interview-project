@@ -30,7 +30,7 @@ export interface Client {
 
 export const fetchUserData = async (email: string, password: string): Promise<User> => {
   try {
-    const response = await axios.get<User[]>('http://localhost:7800/users');
+    const response = await axios.get<User[]>('http://localhost:8045/users');
     const users = response.data;
     const user = users.find((user) => user.email === email && user.password === password);
     if (!user) {
@@ -53,7 +53,7 @@ export const fetchUserData = async (email: string, password: string): Promise<Us
 
 export const fetchUserClientsById = async (userId: number): Promise<Client[]> => {
   try {
-    const response = await axios.get<Client[]>('http://localhost:7800/clients');
+    const response = await axios.get<Client[]>('http://localhost:8045/clients');
     const clients = response.data;
 
   
@@ -69,7 +69,7 @@ export const fetchUserClientsById = async (userId: number): Promise<Client[]> =>
 
 export const fetchClientByNameandId = async (name: string, userId: number): Promise<Client | undefined> => {
   try {
-    const response = await axios.get<Client[]>('http://localhost:7800/clients');
+    const response = await axios.get<Client[]>('http://localhost:8045/clients');
     const clients = response.data;
 
     const client = clients.find((client) => client.name === name && client.userId === userId);

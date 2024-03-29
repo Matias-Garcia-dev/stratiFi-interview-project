@@ -6,7 +6,7 @@
 The StratiFi Interview Project is a web application developed as part of the interview process for StratiFi. It showcases skills in React, Redux, and TypeScript, and integrates with RESTful APIs.
 
 ## Installation
-1. Make sure you have `npm` installed globally: `npm install -g json-server`
+1. Make sure you have `npm` installed globally: `npm install -g json-server` or `sudo npm install -g json-server`
 2. Clone the repository: `git clone https://github.com/Matias-Garcia-dev/stratiFi-interview-project.git`
 3. Navigate to the project directory: `cd stratifi-interview-project`
 4. Install dependencies: `npm install`
