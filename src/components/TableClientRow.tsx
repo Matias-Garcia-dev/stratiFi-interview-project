@@ -1,7 +1,6 @@
 import React from 'react';
 import { UserClient } from '../services/api';
 
-
 interface TableClientRowProps {
   client: UserClient;
   onClick: () => void;
