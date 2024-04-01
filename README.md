@@ -32,6 +32,7 @@ Access the website locally at `http://localhost:5173`. Follow these steps:
 - React and Redux for frontend architecture
 - React Router for routing
 - Axios for HTTP requests
+- Added a Test branch called test-branch wich I install all the libraries and added the test to all components.
 
 ## Contact
 For any questions or feedback, feel free to reach out at matiasenriquegarciadev@gmail.com or [LinkedIn](https://www.linkedin.com/in/matias-garcia-1a661153/).
