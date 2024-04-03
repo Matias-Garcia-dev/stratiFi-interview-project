@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import ClientProfilePage from '../pages/ClientProfilePage'; // Adjust the path accordingly
+import ClientProfilePage from '../pages/ClientProfilePage';
 
 interface ProtectedRouteProps {
   children: ReactNode;

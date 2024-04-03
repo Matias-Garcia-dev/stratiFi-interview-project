@@ -43,7 +43,7 @@ function ClientProfilePage({ clientName }: ClientProfilePageProps): JSX.Element 
   }, [clientName, userId]);
 
   if (!client) {
-    return <div>Loading...</div>;
+    return <div>Loading Profile...</div>;
   }
 
   
